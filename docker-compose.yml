@@ -10,9 +10,13 @@ services:
     volumes:
       - ./default.conf:/etc/nginx/conf.d/default.conf:ro
       - /etc/letsencrypt:/etc/letsencrypt:ro
+      - static_volume:/staticfiles:ro
     networks:
       - nomade_net
 
+volumes:
+  static_volume:
+  
 networks:
   nomade_net:
     external: true
