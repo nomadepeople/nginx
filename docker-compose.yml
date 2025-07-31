@@ -16,6 +16,7 @@ services:
 
 volumes:
   static_volume:
+    external: true
   
 networks:
   nomade_net:
